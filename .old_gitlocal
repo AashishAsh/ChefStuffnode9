@@ -1,0 +1,9 @@
+user.name=Aashish
+user.email=abhiash2050@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@gitserver.example.com:Aashish/chef.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
