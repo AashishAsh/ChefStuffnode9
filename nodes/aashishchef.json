@@ -53,11 +53,6 @@
           "size": "108606",
           "refcount": "3"
         },
-        "8021q": {
-          "size": "20362",
-          "refcount": "0",
-          "version": "1.8"
-        },
         "scsi_transport_fc": {
           "size": "55235",
           "refcount": "3"
@@ -65,6 +60,31 @@
         "scsi_tgt": {
           "size": "12077",
           "refcount": "1"
+        },
+        "vboxpci": {
+          "size": "14476",
+          "refcount": "0",
+          "version": "5.0.32 r112930"
+        },
+        "vboxnetadp": {
+          "size": "19103",
+          "refcount": "0",
+          "version": "5.0.32 r112930 ((0xA2CDe001U))"
+        },
+        "vboxnetflt": {
+          "size": "19861",
+          "refcount": "0",
+          "version": "5.0.32 r112930 ((0xA2CDe001U))"
+        },
+        "vboxdrv": {
+          "size": "454912",
+          "refcount": "3",
+          "version": "5.0.32 r112930 (0x00240000)"
+        },
+        "8021q": {
+          "size": "20362",
+          "refcount": "0",
+          "version": "1.8"
         },
         "garp": {
           "size": "7152",
@@ -80,7 +100,7 @@
         },
         "ipv6": {
           "size": "336282",
-          "refcount": "38"
+          "refcount": "36"
         },
         "uinput": {
           "size": "8120",
@@ -144,15 +164,15 @@
           "size": "8856",
           "refcount": "2"
         },
-        "e1000": {
-          "size": "134895",
-          "refcount": "0",
-          "version": "7.3.21-k8-NAPI"
-        },
         "vboxguest": {
           "size": "284775",
           "refcount": "7",
           "version": "5.0.16"
+        },
+        "e1000": {
+          "size": "134895",
+          "refcount": "0",
+          "version": "7.3.21-k8-NAPI"
         },
         "ext4": {
           "size": "379655",
@@ -239,28 +259,30 @@
     "filesystem": {
       "/dev/mapper/vg_livedvd-lv_root": {
         "kb_size": "36583232",
-        "kb_used": "7445468",
-        "kb_available": "28764828",
-        "percent_used": "21%",
+        "kb_used": "9871664",
+        "kb_available": "26338632",
+        "percent_used": "28%",
         "mount": "/",
         "total_inodes": "2325600",
-        "inodes_used": "229957",
-        "inodes_available": "2095643",
-        "inodes_percent_used": "10%",
+        "inodes_used": "251050",
+        "inodes_available": "2074550",
+        "inodes_percent_used": "11%",
         "fs_type": "ext4",
         "mount_options": [
           "rw"
-        ]
+        ],
+        "uuid": "00776f5a-13b9-45e5-b529-7958b8f1063f",
+        "label": "_CentOS-6.8-x86_"
       },
       "tmpfs": {
         "kb_size": "444420",
-        "kb_used": "80",
-        "kb_available": "444340",
+        "kb_used": "332",
+        "kb_available": "444088",
         "percent_used": "1%",
         "mount": "/dev/shm",
         "total_inodes": "111105",
-        "inodes_used": "5",
-        "inodes_available": "111100",
+        "inodes_used": "7",
+        "inodes_available": "111098",
         "inodes_percent_used": "1%",
         "fs_type": "tmpfs",
         "mount_options": [
@@ -280,7 +302,8 @@
         "fs_type": "ext4",
         "mount_options": [
           "rw"
-        ]
+        ],
+        "uuid": "a68ddb1b-d8ee-4b4c-8651-018ebd4c6c58"
       },
       "proc": {
         "mount": "/proc",
@@ -311,6 +334,14 @@
         "mount_options": [
           "rw"
         ]
+      },
+      "/dev/sda2": {
+        "fs_type": "LVM2_member",
+        "uuid": "0WYmwW-6As7-5Iqc-AoqV-mf8d-38xY-HPBzl9"
+      },
+      "/dev/mapper/vg_livedvd-lv_swap": {
+        "fs_type": "swap",
+        "uuid": "ad122aa3-08a4-41e8-b36a-449b2c3155bb"
       },
       "rootfs": {
         "mount": "/",
@@ -345,7 +376,7 @@
           "rw",
           "relatime",
           "fd=7",
-          "pgrp=1878",
+          "pgrp=1939",
           "timeout=300",
           "minproto=5",
           "maxproto=5",
@@ -359,7 +390,7 @@
           "rw",
           "relatime",
           "fd=13",
-          "pgrp=1878",
+          "pgrp=1939",
           "timeout=300",
           "minproto=5",
           "maxproto=5",
@@ -603,15 +634,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "480",
-              "packets": "8",
+              "bytes": "19552",
+              "packets": "225",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "480",
-              "packets": "8",
+              "bytes": "19552",
+              "packets": "225",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -621,16 +652,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "3729262",
-              "packets": "28735",
+              "bytes": "1189519",
+              "packets": "8619",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "111771619",
-              "packets": "89912",
+              "bytes": "3177360",
+              "packets": "9975",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -639,16 +670,16 @@
           "eth1": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "20034",
-              "packets": "106",
+              "bytes": "45783",
+              "packets": "428",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "750401",
-              "packets": "8010",
+              "bytes": "489659",
+              "packets": "5205",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -667,7 +698,7 @@
         "model": "69",
         "model_name": "Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz",
         "stepping": "1",
-        "mhz": "2394.458",
+        "mhz": "2394.456",
         "cache_size": "3072 KB",
         "physical_id": "0",
         "core_id": "0",
@@ -728,7 +759,7 @@
         "model": "69",
         "model_name": "Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz",
         "stepping": "1",
-        "mhz": "2394.458",
+        "mhz": "2394.456",
         "cache_size": "3072 KB",
         "physical_id": "0",
         "core_id": "1",
@@ -789,9 +820,9 @@
     },
     "memory": {
       "swap": {
-        "cached": "536kB",
+        "cached": "12736kB",
         "total": "4128764kB",
-        "free": "4114024kB"
+        "free": "4040044kB"
       },
       "hugepages": {
         "total": "0",
@@ -800,26 +831,26 @@
         "surplus": "0"
       },
       "total": "888840kB",
-      "free": "204212kB",
-      "buffers": "13436kB",
-      "cached": "317364kB",
-      "active": "298028kB",
-      "inactive": "282100kB",
-      "dirty": "20kB",
+      "free": "129356kB",
+      "buffers": "13104kB",
+      "cached": "209172kB",
+      "active": "274704kB",
+      "inactive": "380212kB",
+      "dirty": "432kB",
       "writeback": "0kB",
-      "anon_pages": "248900kB",
-      "mapped": "24916kB",
-      "slab": "49604kB",
-      "slab_reclaimable": "18752kB",
-      "slab_unreclaim": "30852kB",
-      "page_tables": "29920kB",
+      "anon_pages": "423792kB",
+      "mapped": "46508kB",
+      "slab": "47360kB",
+      "slab_reclaimable": "16288kB",
+      "slab_unreclaim": "31072kB",
+      "page_tables": "30552kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "4573184kB",
-      "committed_as": "836788kB",
+      "committed_as": "1541924kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "24820kB",
-      "vmalloc_chunk": "34359704568kB",
+      "vmalloc_chunk": "34359704056kB",
       "hugepage_size": "2048kB"
     },
     "languages": {
@@ -879,12 +910,156 @@
         "chef_root": "/opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib"
       }
     },
-    "uptime_seconds": 30338,
-    "uptime": "8 hours 25 minutes 38 seconds",
-    "idletime_seconds": 59855,
-    "idletime": "16 hours 37 minutes 35 seconds",
+    "virtualbox": {
+      "host": {
+        "language": "en_US",
+        "revision": "112026",
+        "version": "5.1.10"
+      },
+      "guest": {
+        "guest_additions_version": "5.0.16",
+        "guest_additions_revision": "105871"
+      }
+    },
+    "uptime_seconds": 40743,
+    "uptime": "11 hours 19 minutes 03 seconds",
+    "idletime_seconds": 80283,
+    "idletime": "22 hours 18 minutes 03 seconds",
     "dmi": {
-      "dmidecode_version": "2.12"
+      "dmidecode_version": "2.12",
+      "smbios_version": "2.5",
+      "structures": {
+        "count": "10",
+        "size": "450"
+      },
+      "table_location": "0x000E1000",
+      "bios": {
+        "all_records": [
+          {
+            "record_id": "0x0000",
+            "size": "0",
+            "application_identifier": "BIOS Information",
+            "Vendor": "innotek GmbH",
+            "Version": "VirtualBox",
+            "Release Date": "12/01/2006",
+            "Address": "0xE0000",
+            "Runtime Size": "128 kB",
+            "ROM Size": "128 kB",
+            "Characteristics": {
+              "ISA is supported": null,
+              "PCI is supported": null,
+              "Boot from CD is supported": null,
+              "Selectable boot is supported": null,
+              "8042 keyboard services are supported (int 9h)": null,
+              "CGA/mono video services are supported (int 10h)": null,
+              "ACPI is supported": null
+            }
+          }
+        ],
+        "vendor": "innotek GmbH",
+        "version": "VirtualBox",
+        "release_date": "12/01/2006",
+        "address": "0xE0000",
+        "runtime_size": "128 kB",
+        "rom_size": "128 kB"
+      },
+      "system": {
+        "all_records": [
+          {
+            "record_id": "0x0001",
+            "size": "1",
+            "application_identifier": "System Information",
+            "Manufacturer": "innotek GmbH",
+            "Product Name": "VirtualBox",
+            "Version": "1.2",
+            "Serial Number": "0",
+            "UUID": "09523FE7-7865-4591-90CA-258664E24527",
+            "Wake-up Type": "Power Switch",
+            "SKU Number": "Not Specified",
+            "Family": "Virtual Machine"
+          }
+        ],
+        "manufacturer": "innotek GmbH",
+        "product_name": "VirtualBox",
+        "version": "1.2",
+        "serial_number": "0",
+        "uuid": "09523FE7-7865-4591-90CA-258664E24527",
+        "wake_up_type": "Power Switch",
+        "sku_number": "Not Specified",
+        "family": "Virtual Machine"
+      },
+      "base_board": {
+        "all_records": [
+          {
+            "record_id": "0x0008",
+            "size": "2",
+            "application_identifier": "Base Board Information",
+            "Manufacturer": "Oracle Corporation",
+            "Product Name": "VirtualBox",
+            "Version": "1.2",
+            "Serial Number": "0",
+            "Asset Tag": "Not Specified",
+            "Features": {
+              "Board is a hosting board": null
+            },
+            "Location In Chassis": "Not Specified",
+            "Chassis Handle": "0x0003",
+            "Type": "Motherboard",
+            "Contained Object Handles": "0"
+          }
+        ],
+        "manufacturer": "Oracle Corporation",
+        "product_name": "VirtualBox",
+        "version": "1.2",
+        "serial_number": "0",
+        "asset_tag": "Not Specified",
+        "location_in_chassis": "Not Specified",
+        "chassis_handle": "0x0003",
+        "type": "Motherboard",
+        "contained_object_handles": "0"
+      },
+      "chassis": {
+        "all_records": [
+          {
+            "record_id": "0x0003",
+            "size": "3",
+            "application_identifier": "Chassis Information",
+            "Manufacturer": "Oracle Corporation",
+            "Type": "Other",
+            "Lock": "Not Present",
+            "Version": "Not Specified",
+            "Serial Number": "Not Specified",
+            "Asset Tag": "Not Specified",
+            "Boot-up State": "Safe",
+            "Power Supply State": "Safe",
+            "Thermal State": "Safe",
+            "Security Status": "None"
+          }
+        ],
+        "manufacturer": "Oracle Corporation",
+        "type": "Other",
+        "lock": "Not Present",
+        "version": "Not Specified",
+        "serial_number": "Not Specified",
+        "asset_tag": "Not Specified",
+        "boot_up_state": "Safe",
+        "power_supply_state": "Safe",
+        "thermal_state": "Safe",
+        "security_status": "None"
+      },
+      "oem_strings": {
+        "all_records": [
+          {
+            "record_id": "0x0002",
+            "size": "11",
+            "application_identifier": "OEM Strings",
+            "String 1": "vboxVer_5.1.10",
+            "String 2": "vboxRev_112026"
+          }
+        ],
+        "string_1": "vboxVer_5.1.10",
+        "string_2": "vboxRev_112026"
+      }
     },
     "etc": {
       "passwd": {
@@ -1167,6 +1342,13 @@
           "uid": 495,
           "shell": "/bin/false",
           "gecos": ""
+        },
+        "nginx": {
+          "dir": "/var/lib/nginx",
+          "gid": 488,
+          "uid": 494,
+          "shell": "/sbin/nologin",
+          "gecos": "Nginx web server"
         }
       },
       "group": {
@@ -1570,10 +1752,22 @@
           "members": [
 
           ]
+        },
+        "vboxusers": {
+          "gid": 489,
+          "members": [
+
+          ]
+        },
+        "nginx": {
+          "gid": 488,
+          "members": [
+
+          ]
         }
       }
     },
-    "current_user": "vagrant",
+    "current_user": "root",
     "init_package": "init",
     "fips": {
       "kernel": {
@@ -1592,29 +1786,31 @@
       "by_device": {
         "/dev/mapper/vg_livedvd-lv_root": {
           "kb_size": "36583232",
-          "kb_used": "7445468",
-          "kb_available": "28764828",
-          "percent_used": "21%",
+          "kb_used": "9871664",
+          "kb_available": "26338632",
+          "percent_used": "28%",
           "total_inodes": "2325600",
-          "inodes_used": "229957",
-          "inodes_available": "2095643",
-          "inodes_percent_used": "10%",
+          "inodes_used": "251050",
+          "inodes_available": "2074550",
+          "inodes_percent_used": "11%",
           "fs_type": "ext4",
           "mount_options": [
             "rw"
           ],
+          "uuid": "00776f5a-13b9-45e5-b529-7958b8f1063f",
+          "label": "_CentOS-6.8-x86_",
           "mounts": [
             "/"
           ]
         },
         "tmpfs": {
           "kb_size": "444420",
-          "kb_used": "80",
-          "kb_available": "444340",
+          "kb_used": "332",
+          "kb_available": "444088",
           "percent_used": "1%",
           "total_inodes": "111105",
-          "inodes_used": "5",
-          "inodes_available": "111100",
+          "inodes_used": "7",
+          "inodes_available": "111098",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1637,6 +1833,7 @@
           "mount_options": [
             "rw"
           ],
+          "uuid": "a68ddb1b-d8ee-4b4c-8651-018ebd4c6c58",
           "mounts": [
             "/boot"
           ]
@@ -1690,11 +1887,15 @@
           ]
         },
         "/dev/sda2": {
+          "fs_type": "LVM2_member",
+          "uuid": "0WYmwW-6As7-5Iqc-AoqV-mf8d-38xY-HPBzl9",
           "mounts": [
 
           ]
         },
         "/dev/mapper/vg_livedvd-lv_swap": {
+          "fs_type": "swap",
+          "uuid": "ad122aa3-08a4-41e8-b36a-449b2c3155bb",
           "mounts": [
 
           ]
@@ -1737,7 +1938,7 @@
             "rw",
             "relatime",
             "fd=7",
-            "pgrp=1878",
+            "pgrp=1939",
             "timeout=300",
             "minproto=5",
             "maxproto=5",
@@ -1753,7 +1954,7 @@
             "rw",
             "relatime",
             "fd=13",
-            "pgrp=1878",
+            "pgrp=1939",
             "timeout=300",
             "minproto=5",
             "maxproto=5",
@@ -1767,17 +1968,19 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "36583232",
-          "kb_used": "7445468",
-          "kb_available": "28764828",
-          "percent_used": "21%",
+          "kb_used": "9871664",
+          "kb_available": "26338632",
+          "percent_used": "28%",
           "total_inodes": "2325600",
-          "inodes_used": "229957",
-          "inodes_available": "2095643",
-          "inodes_percent_used": "10%",
+          "inodes_used": "251050",
+          "inodes_available": "2074550",
+          "inodes_percent_used": "11%",
           "fs_type": "rootfs",
           "mount_options": [
             "rw"
           ],
+          "uuid": "00776f5a-13b9-45e5-b529-7958b8f1063f",
+          "label": "_CentOS-6.8-x86_",
           "devices": [
             "/dev/mapper/vg_livedvd-lv_root",
             "rootfs"
@@ -1785,12 +1988,12 @@
         },
         "/dev/shm": {
           "kb_size": "444420",
-          "kb_used": "80",
-          "kb_available": "444340",
+          "kb_used": "332",
+          "kb_available": "444088",
           "percent_used": "1%",
           "total_inodes": "111105",
-          "inodes_used": "5",
-          "inodes_available": "111100",
+          "inodes_used": "7",
+          "inodes_available": "111098",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1813,6 +2016,7 @@
           "mount_options": [
             "rw"
           ],
+          "uuid": "a68ddb1b-d8ee-4b4c-8651-018ebd4c6c58",
           "devices": [
             "/dev/sda1"
           ]
@@ -1884,7 +2088,7 @@
             "rw",
             "relatime",
             "fd=7",
-            "pgrp=1878",
+            "pgrp=1939",
             "timeout=300",
             "minproto=5",
             "maxproto=5",
@@ -1900,7 +2104,7 @@
             "rw",
             "relatime",
             "fd=13",
-            "pgrp=1878",
+            "pgrp=1939",
             "timeout=300",
             "minproto=5",
             "maxproto=5",
@@ -1915,29 +2119,31 @@
         "/dev/mapper/vg_livedvd-lv_root,/": {
           "device": "/dev/mapper/vg_livedvd-lv_root",
           "kb_size": "36583232",
-          "kb_used": "7445468",
-          "kb_available": "28764828",
-          "percent_used": "21%",
+          "kb_used": "9871664",
+          "kb_available": "26338632",
+          "percent_used": "28%",
           "mount": "/",
           "total_inodes": "2325600",
-          "inodes_used": "229957",
-          "inodes_available": "2095643",
-          "inodes_percent_used": "10%",
+          "inodes_used": "251050",
+          "inodes_available": "2074550",
+          "inodes_percent_used": "11%",
           "fs_type": "ext4",
           "mount_options": [
             "rw"
-          ]
+          ],
+          "uuid": "00776f5a-13b9-45e5-b529-7958b8f1063f",
+          "label": "_CentOS-6.8-x86_"
         },
         "tmpfs,/dev/shm": {
           "device": "tmpfs",
           "kb_size": "444420",
-          "kb_used": "80",
-          "kb_available": "444340",
+          "kb_used": "332",
+          "kb_available": "444088",
           "percent_used": "1%",
           "mount": "/dev/shm",
           "total_inodes": "111105",
-          "inodes_used": "5",
-          "inodes_available": "111100",
+          "inodes_used": "7",
+          "inodes_available": "111098",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -1958,7 +2164,8 @@
           "fs_type": "ext4",
           "mount_options": [
             "rw"
-          ]
+          ],
+          "uuid": "a68ddb1b-d8ee-4b4c-8651-018ebd4c6c58"
         },
         "proc,/proc": {
           "device": "proc",
@@ -2001,10 +2208,14 @@
           "device": "/dev/sda"
         },
         "/dev/sda2,": {
-          "device": "/dev/sda2"
+          "device": "/dev/sda2",
+          "fs_type": "LVM2_member",
+          "uuid": "0WYmwW-6As7-5Iqc-AoqV-mf8d-38xY-HPBzl9"
         },
         "/dev/mapper/vg_livedvd-lv_swap,": {
-          "device": "/dev/mapper/vg_livedvd-lv_swap"
+          "device": "/dev/mapper/vg_livedvd-lv_swap",
+          "fs_type": "swap",
+          "uuid": "ad122aa3-08a4-41e8-b36a-449b2c3155bb"
         },
         "rootfs,/": {
           "device": "rootfs",
@@ -2043,7 +2254,7 @@
             "rw",
             "relatime",
             "fd=7",
-            "pgrp=1878",
+            "pgrp=1939",
             "timeout=300",
             "minproto=5",
             "maxproto=5",
@@ -2058,7 +2269,7 @@
             "rw",
             "relatime",
             "fd=13",
-            "pgrp=1878",
+            "pgrp=1939",
             "timeout=300",
             "minproto=5",
             "maxproto=5",
@@ -2677,6 +2888,13 @@
         "installdate": "1463922045",
         "arch": "x86_64"
       },
+      "autotrace": {
+        "epoch": "0",
+        "version": "0.31.1",
+        "release": "28.el6",
+        "installdate": "1485963196",
+        "arch": "x86_64"
+      },
       "speex": {
         "epoch": "0",
         "version": "1.2",
@@ -2739,6 +2957,13 @@
         "release": "15.el6_6.2",
         "installdate": "1463922071",
         "arch": "x86_64"
+      },
+      "nginx-filesystem": {
+        "epoch": "0",
+        "version": "1.10.2",
+        "release": "1.el6",
+        "installdate": "1487266705",
+        "arch": "noarch"
       },
       "psmisc": {
         "epoch": "0",
@@ -3860,13 +4085,6 @@
         "installdate": "1463921359",
         "arch": "x86_64"
       },
-      "httpd": {
-        "epoch": "0",
-        "version": "2.2.15",
-        "release": "55.el6.centos.2",
-        "installdate": "1480379565",
-        "arch": "x86_64"
-      },
       "pulseaudio-utils": {
         "epoch": "0",
         "version": "0.9.21",
@@ -3929,6 +4147,13 @@
         "release": "6.el6",
         "installdate": "1463921375",
         "arch": "x86_64"
+      },
+      "GeoIP-GeoLite-data-extra": {
+        "epoch": "0",
+        "version": "2017.01",
+        "release": "1.el6",
+        "installdate": "1487266696",
+        "arch": "noarch"
       },
       "libopenraw-gnome": {
         "epoch": "0",
@@ -6387,6 +6612,13 @@
         "installdate": "1463922508",
         "arch": "x86_64"
       },
+      "fontforge": {
+        "epoch": "0",
+        "version": "20090622",
+        "release": "3.1.el6",
+        "installdate": "1485963202",
+        "arch": "x86_64"
+      },
       "kdeadmin": {
         "epoch": "7",
         "version": "4.3.4",
@@ -6415,6 +6647,13 @@
         "installdate": "1463922518",
         "arch": "x86_64"
       },
+      "yum": {
+        "epoch": "0",
+        "version": "3.2.29",
+        "release": "75.el6.centos",
+        "installdate": "1486002641",
+        "arch": "noarch"
+      },
       "evolution-exchange": {
         "epoch": "0",
         "version": "2.32.3",
@@ -6429,11 +6668,25 @@
         "installdate": "1463922527",
         "arch": "x86_64"
       },
+      "GeoIP-GeoLite-data": {
+        "epoch": "0",
+        "version": "2017.01",
+        "release": "1.el6",
+        "installdate": "1487266697",
+        "arch": "noarch"
+      },
       "libfprint": {
         "epoch": "0",
         "version": "0.1.0",
         "release": "19.pre2.el6",
         "installdate": "1463922536",
+        "arch": "x86_64"
+      },
+      "GeoIP": {
+        "epoch": "0",
+        "version": "1.6.5",
+        "release": "1.el6",
+        "installdate": "1487266707",
         "arch": "x86_64"
       },
       "gnome-system-monitor": {
@@ -8704,13 +8957,6 @@
         "installdate": "1463922967",
         "arch": "x86_64"
       },
-      "kernel-headers": {
-        "epoch": "0",
-        "version": "2.6.32",
-        "release": "642.1.1.el6",
-        "installdate": "1465915905",
-        "arch": "x86_64"
-      },
       "libbonoboui": {
         "epoch": "0",
         "version": "2.24.2",
@@ -8774,6 +9020,13 @@
         "installdate": "1463923001",
         "arch": "x86_64"
       },
+      "dkms": {
+        "epoch": "0",
+        "version": "2.3",
+        "release": "1.20161202gitde1dca9.el6",
+        "installdate": "1485963114",
+        "arch": "noarch"
+      },
       "plymouth-plugin-two-step": {
         "epoch": "0",
         "version": "0.8.3",
@@ -8786,6 +9039,13 @@
         "version": "4.3.4",
         "release": "5.el6",
         "installdate": "1463923011",
+        "arch": "x86_64"
+      },
+      "kernel-headers": {
+        "epoch": "0",
+        "version": "2.6.32",
+        "release": "642.13.1.el6",
+        "installdate": "1485963218",
         "arch": "x86_64"
       },
       "xorg-x11-utils": {
@@ -8802,6 +9062,13 @@
         "installdate": "1463923020",
         "arch": "x86_64"
       },
+      "vagrant": {
+        "epoch": "1",
+        "version": "1.8.1",
+        "release": "1",
+        "installdate": "1485993935",
+        "arch": "x86_64"
+      },
       "libnotify": {
         "epoch": "0",
         "version": "0.5.0",
@@ -8816,6 +9083,13 @@
         "installdate": "1463923031",
         "arch": "noarch"
       },
+      "httpd-tools": {
+        "epoch": "0",
+        "version": "2.2.15",
+        "release": "56.el6.centos.3",
+        "installdate": "1486247687",
+        "arch": "x86_64"
+      },
       "notify-python": {
         "epoch": "0",
         "version": "0.1.1",
@@ -8828,6 +9102,13 @@
         "version": "3.2.6",
         "release": "4.el6",
         "installdate": "1463923046",
+        "arch": "x86_64"
+      },
+      "gd": {
+        "epoch": "0",
+        "version": "2.0.35",
+        "release": "11.el6",
+        "installdate": "1487266700",
         "arch": "x86_64"
       },
       "fprintd": {
@@ -8870,6 +9151,13 @@
         "version": "2.30.3",
         "release": "3.el6",
         "installdate": "1463923080",
+        "arch": "x86_64"
+      },
+      "nginx": {
+        "epoch": "0",
+        "version": "1.11.10",
+        "release": "1.el6.ngx",
+        "installdate": "1487311900",
         "arch": "x86_64"
       },
       "kdelibs3": {
@@ -9680,8 +9968,8 @@
       "kernel-devel": {
         "epoch": "0",
         "version": "2.6.32",
-        "release": "642.1.1.el6",
-        "installdate": "1465915671",
+        "release": "642.13.1.el6",
+        "installdate": "1485963226",
         "arch": "x86_64"
       },
       "m17n-contrib": {
@@ -9831,13 +10119,6 @@
         "installdate": "1463922039",
         "arch": "x86_64"
       },
-      "httpd-tools": {
-        "epoch": "0",
-        "version": "2.2.15",
-        "release": "55.el6.centos.2",
-        "installdate": "1480379563",
-        "arch": "x86_64"
-      },
       "libtool-ltdl": {
         "epoch": "0",
         "version": "2.2.6",
@@ -9906,6 +10187,13 @@
         "version": "3.1.10",
         "release": "48.el6",
         "installdate": "1463922065",
+        "arch": "x86_64"
+      },
+      "httpd": {
+        "epoch": "0",
+        "version": "2.2.15",
+        "release": "56.el6.centos.3",
+        "installdate": "1486247692",
         "arch": "x86_64"
       },
       "libicu": {
@@ -10376,13 +10664,6 @@
         "release": "7.el6",
         "installdate": "1463922743",
         "arch": "x86_64"
-      },
-      "yum": {
-        "epoch": "0",
-        "version": "3.2.29",
-        "release": "73.el6.centos",
-        "installdate": "1463921859",
-        "arch": "noarch"
       },
       "xorg-x11-fonts-100dpi": {
         "epoch": "0",
@@ -11035,6 +11316,13 @@
         "installdate": "1463921362",
         "arch": "x86_64"
       },
+      "libuninameslist": {
+        "epoch": "0",
+        "version": "20080409",
+        "release": "3.1.el6",
+        "installdate": "1485963199",
+        "arch": "x86_64"
+      },
       "libdmx": {
         "epoch": "0",
         "version": "1.1.3",
@@ -11068,6 +11356,13 @@
         "version": "1.0.9",
         "release": "0.7.rc1.el6",
         "installdate": "1463921370",
+        "arch": "x86_64"
+      },
+      "VirtualBox-5.0": {
+        "epoch": "0",
+        "version": "5.0.32_112930_el6",
+        "release": "1",
+        "installdate": "1485996871",
         "arch": "x86_64"
       },
       "metacity": {
@@ -11104,6 +11399,13 @@
         "release": "3.el6",
         "installdate": "1463921380",
         "arch": "noarch"
+      },
+      "geoipupdate": {
+        "epoch": "0",
+        "version": "2.2.1",
+        "release": "2.el6",
+        "installdate": "1487266706",
+        "arch": "x86_64"
       },
       "ConsoleKit-x11": {
         "epoch": "0",
@@ -11626,7 +11928,8 @@
     },
     "keys": {
       "ssh": {
-
+        "host_dsa_public": "AAAAB3NzaC1kc3MAAACBALaJCTvuFphTXE0nU/m/x1pkJsxb4TZ3epEJi5np4PvRLIt0e4DuAr4xha606lCF0kQkYjisDLM48disbqvhyqIAE6bO+AcVGFdxkcM5kgIt7jyTW7JneFuqw6U5UYLo/+E2yuSh9hY8LQ+HBMMVgWAEA97DxIgY8rlJujixf2aHAAAAFQCiI3qnp7V4spDMNY7KYhVp/Vk6EQAAAIBWurknVu49CDiwO71NyMRqkwh8kzFpt75AlunaDutPvs80dFBAUODzbjCRydSMIPDbM0rDCJpq0m3E5gJtIVbd21QJmrKg3P5Yo6AM9F6zCQuAPRAVd2JvSaP3BTX+5MmPpEA8dthPzeRY34x2Js8ZJvcIAIKVXcdZ829PMCRT/gAAAIAig3zKsKPshCcCY6AMH0VEtSp/sW3o4bDOzmbhifm9JdwdV9pENZK+rrHj97imdsfE4Fvr7j/6+KCItFHboo6Q5JnX+rLjowvx7QIhe/bWvG3JbVgMSmP5lsZJyRQJhUsIMLXVpgiCyOPi6NdLxSuFHCgkr1x53VGdGzKNDgRL5A==",
+        "host_rsa_public": "AAAAB3NzaC1yc2EAAAABIwAAAQEA1Ub0HZxyH9mgpezgPm1YjjLym2FiWmYVsvF7JprIYg3EK+1R1H6PKbWYQXuKCBGFw/lNjz1lJsvFrld5s4nC4DwwnbhFjMs6lQBAu7hsbusSfhkuoUzSfG3V9KEMgOIjLJRo3fb+lLhYkr1abjZZ/NMqF01ufi2mltvn7uAphct8L0Pgb/CWV/UXa/0rwcyUDu4W6kHV737V0Rf8Z0p70u1rR9uQ+GWIB8BKW0815hQPdzkr8qCamyxpC/HgEz8nWGaCvpXc6bgDmEOyz2PoIVyPyPHZxC/LuZB7n7MQ48KXQ0cApgB5Pl/tCv2jXOa1b/ve2+tSNs+lNMyfkyi+Aw=="
       }
     },
     "time": {
@@ -11644,7 +11947,7 @@
       "ps": "ps -ef"
     },
     "cloud_v2": null,
-    "ohai_time": 1485313086.9644802,
+    "ohai_time": 1487355108.693616,
     "hostname": "ubuntu-chefworkstation",
     "machinename": "ubuntu-chefworkstation.example.com",
     "fqdn": "ubuntu-chefworkstation.example.com",

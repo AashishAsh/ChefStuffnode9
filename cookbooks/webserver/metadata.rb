@@ -1,7 +1,7 @@
 name             'webserver'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'AashishNewTech'
+maintainer_email 'aashish.m0501@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures webserver'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.1'
+version          '0.5.5'
