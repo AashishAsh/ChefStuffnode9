@@ -2,7 +2,14 @@ Java Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the Java cookbook.
 
-v1.45.0 - 12/27/2016
+v1.47.0 - 01/30/2017
+-----
+- Fix typo in method name (#397)
+- Remove useless ruby_block[set-env-java-home]
+- Update README: using java::notify
+- Add forgotten "do" to README
+
+v1.46.0 - 01/09/2017
 -----
 - fix jce installation on windows #386
 
