@@ -2,13 +2,10 @@
 package 'apache' do
    package_name 'httpd'
 end
-
 %w{vim tree emacs}.each do |pkg|
 package pkg do
  action :install
 end
-end 
-
 service 'httpd' do
  action [:enable, :start]
 end
@@ -17,15 +14,13 @@ file '/var/www/index.html' do
  content 'hello mani pramod pavan aashish '
  action :delete
 end
-
 file '/var/www/html/index.html' do
  content 'hello mani pramod pavan aashish '
  mode '0755'
  owner 'root'
  group 'apache'
 end
-
-execute 'only-if-example' do
- command 'echo "aashish has changed the changes using only_if in chef">> /etc/hosts' 
- only_if 'test -z $(grep "aashish has changed the changes using only_if in chef" /etc/hosts)'
-end 
+#execute 'only-if-example' do
+# command '/usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts' 
+# only_if 'test -z $(grep "aashish has changed d changes using only_if in chef" /etc/hosts)'
+#end 
