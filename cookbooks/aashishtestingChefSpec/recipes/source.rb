@@ -1,5 +1,5 @@
-cache_path     = Chef::Config['file_cache_path'] source_version =
-node['vim']['source']['version']
+cache_path     = Chef::Config['file_cache_path'] 
+source_version = node['vim']['source']['version']
 
 node['vim']['source']['dependencies'].each do |dependency| package dependency do
 action :install end

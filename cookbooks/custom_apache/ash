@@ -1,0 +1,77 @@
+include_recipe 'java'
+
+tmp_path = Chef::Config[:file_cache_path]
+
+#creating a user , no need mention action due to default is to create
+user node['tomcat8']['tomcat_user'] do
+     comment 'Apache Tomcat'
+     uid '91'
+     gid '91'
+     home '/opt/greensky'
+     shell '/sbin/nologin'
+end
+
+#Download tomcat archive
+remote_file "#{tmp_path}/tomcat8.tar.gz" do
+  source node['tomcat8']['download_url']
+  owner node['tomcat8']['tomcat_user']
+  mode '0644'
+  action :create
+end
+
+#chmod the dir
+directory '/opt/greensky' do
+  chmod '755'
+end
+
+#create a tomcat8 directory , no need mention action due to default is to create
+%w[ /var/log/tomcat8 /var/run/tomcat].each do |path|
+directory path do
+  owner node['tomcat8']['tomcat_user']
+  group node['tomcat8']['tomcat_user']
+  mode '0644'
+end
+
+#create a softlink to the init script , no need to mention link_type by default it is symbolic(softlink)
+link '/opt/greensky/tomcat8/init.d/tomcat8' do
+  to '/etc/init.d/tomcat8'
+  link_type :symbolic
+end
+
+#create tomcat install dir
+directory node['tomcat8']['install_location'] do
+  owner node['tomcat8']['tomcat_user']
+  mode '0755'
+  action :create
+end
+
+#Extract the tomcat archive to the install location
+bash 'Extract tomcat archive' do
+  user node['tomcat8']['tomcat_user']
+  cwd node['tomcat8']['install_location']
+  code <<-EOH
+    tar -zxvf #{tmp_path}/tomcat8.tar.gz --strip 1
+  EOH
+  action :run
+end
+
+#Install server.xml from template
+template "#{node['tomcat8']['install_location']}/conf/server.xml" do
+  source 'server.xml.erb'
+  owner node['tomcat8']['tomcat_user']
+  mode '0644'
+end
+
+#Install init script
+template "/etc/init.d/tomcat8" do
+  source 'tomcat8.erb'
+  owner 'root'
+  mode '0755'
+end
+
+#Start and enable tomcat service if requested
+service 'tomcat8' do
+  action [:enable, :start]
+  only_if { node['tomcat8']['autostart'] }
+end
+
