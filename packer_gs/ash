@@ -1,0 +1,8 @@
+ef generate app packer_gs
+chef genreate policyfile
+chef install
+chef update
+chef push <policy-group>
+chef push dr_aws_prde2_vpc_1384447a
+snipper file
+dr - staging 

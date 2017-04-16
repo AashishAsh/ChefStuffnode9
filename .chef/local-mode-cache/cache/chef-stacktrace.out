@@ -1,10 +1,10 @@
-Generated at 2017-03-26 14:56:41 +0530
-Mixlib::ShellOut::ShellCommandFailed: execute[only-if-example] (@recipe_files::/home/vagrant/chef-repo/learn.rb line 28) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '127'
----- Begin output of /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts ----
+Generated at 2017-04-16 10:33:57 -0500
+Mixlib::ShellOut::ShellCommandFailed: execute[git] (@recipe_files::/home/vagrant/chef-repo/learn.rb line 34) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '128'
+---- Begin output of git clone gitlink ----
 STDOUT: 
-STDERR: sh: /usr/bin/echo: No such file or directory
----- End output of /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts ----
-Ran /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts returned 127
+STDERR: fatal: destination path 'gitlink' already exists and is not an empty directory.
+---- End output of git clone gitlink ----
+Ran git clone gitlink returned 128
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:289:in `invalid!'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:276:in `error!'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/mixin/shell_out.rb:45:in `shell_out!'
@@ -46,12 +46,12 @@ Ran /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc
 /usr/bin/chef-client:57:in `load'
 /usr/bin/chef-client:57:in `<main>'
 
->>>> Caused by Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '127'
----- Begin output of /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts ----
+>>>> Caused by Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '128'
+---- Begin output of git clone gitlink ----
 STDOUT: 
-STDERR: sh: /usr/bin/echo: No such file or directory
----- End output of /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts ----
-Ran /usr/bin/echo "aashish has changed the changes using only_if in chef">> /etc/hosts returned 127
+STDERR: fatal: destination path 'gitlink' already exists and is not an empty directory.
+---- End output of git clone gitlink ----
+Ran git clone gitlink returned 128
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:289:in `invalid!'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/mixlib-shellout-2.2.7/lib/mixlib/shellout.rb:276:in `error!'
 /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.15.19/lib/chef/mixin/shell_out.rb:45:in `shell_out!'

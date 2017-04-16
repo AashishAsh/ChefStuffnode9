@@ -9,6 +9,8 @@ package pkg do
 end
 end 
 
+
+
 service 'httpd' do
  action [:enable, :start]
 end
@@ -23,6 +25,14 @@ file '/var/www/html/index.html' do
  mode '0755'
  owner 'root'
  group 'apache'
+end
+
+execute 'nothing' do
+ command 'ls -a'
+end
+
+execute 'git' do
+ command 'git clone gitlink'
 end
 
 execute 'only-if-example' do

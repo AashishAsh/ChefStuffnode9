@@ -1,0 +1,50 @@
+{
+  "revision_id": "f6f3a26217f5ac71177a684dd0aa82d85c1ac154d7dcca0ac6e7f2be1b9154ee",
+  "name": "packer_gs",
+  "run_list": [
+    "recipe[packer_gs::default]"
+  ],
+  "cookbook_locks": {
+    "packer_gs": {
+      "version": "0.1.0",
+      "identifier": "c732c1929047905aeee3fed6a3914ad3e84d8baa",
+      "dotted_decimal_identifier": "56069327334426512.25595410904425361.82273995951018",
+      "source": "cookbooks/packer_gs",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": null,
+        "working_tree_clean": true,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "cookbooks/packer_gs"
+      }
+    }
+  },
+  "default_attributes": {
+    "packer_gs": {
+      "version": "0.1.0"
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "packer_gs",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "packer_gs (0.1.0)": [
+
+      ]
+    }
+  }
+}
