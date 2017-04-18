@@ -1,5 +1,5 @@
-name             'tomcat8'
-maintainer       'DevOps'
+name             'tomcat8-backup'
+maintainer       'DevOps-backup'
 maintainer_email 'devops@greenskycredit.com'
 license          'Apache 2.0'
 description      'Installs/Configures tomcat8'

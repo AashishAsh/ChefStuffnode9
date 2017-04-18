@@ -1,0 +1,7 @@
+DEPENDENCIES
+  mysql
+    path: .
+    metadata: true
+
+GRAPH
+  mysql (8.3.1)

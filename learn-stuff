@@ -1,0 +1,5 @@
+berks install
+berks upload
+chef install
+chef upload
+knife cookbook upload *
