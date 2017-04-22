@@ -3,6 +3,10 @@
 # Recipe:: default
 #
 # Copyright (c) 2017 The Authors, All Rights Reserved.
+mysql_client 'default' do
+ action :create
+end
+
 mysql_service 'foo' do
   port '3306'
   version '5.5'
